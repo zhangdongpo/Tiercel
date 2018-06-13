@@ -131,7 +131,12 @@ public class TRManager {
 
 
     public var runningTasks: [TRTask] {
-        return tasks.filter { $0.status == .running }
+        get {
+            return tasks.filter { $0.status == .running }
+        }
+        set {
+            self.runningTasks = newValue
+        }
     }
 
     public var completedTasks: [TRTask] {

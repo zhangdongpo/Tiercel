@@ -16,7 +16,7 @@ class ViewController3: BaseViewController {
         super.viewDidLoad()
 
         downloadManager = TRManager("ViewController3", isStoreInfo: true)
-        downloadManager?.tasks.removeAll()
+        
         // 因为会读取缓存到沙盒的任务，所以第一次的时候，不要马上开始下载
         downloadManager?.isStartDownloadImmediately = false
 
