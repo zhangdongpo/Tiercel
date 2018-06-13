@@ -116,7 +116,7 @@ public class TRManager {
 
 
     private var internalTasks: [TRTask] = []
-    public internal(set) var tasks: [TRTask] {
+    public  var tasks: [TRTask] {
         get {
             return queue.sync {
                 internalTasks
