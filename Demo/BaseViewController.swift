@@ -160,8 +160,7 @@ extension BaseViewController: UITableViewDataSource, UITableViewDelegate {
                 else { return }
             switch task.status {
             case .running:
-                strongSelf.downloadManager?.suspend(URLString)
-                cell.controlButton.setImage(#imageLiteral(resourceName: "suspend"), for: .normal)
+                downloadManager.runningTasks.removeAll()
             case .suspend:
                 strongSelf.downloadManager?.start(URLString)
                 cell.controlButton.setImage(#imageLiteral(resourceName: "resume"), for: .normal)

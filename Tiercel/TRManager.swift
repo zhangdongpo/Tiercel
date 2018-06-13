@@ -129,13 +129,21 @@ public class TRManager {
         }
     }
 
-
+    
     public var runningTasks: [TRTask] {
         get {
-            return tasks.filter { $0.status == .running }
+            
+              return  tasks.filter { $0.status == .running }
+            
+            
         }
         set {
-            self.runningTasks = newValue
+            DispatchQueue.main.async {
+                 self.runningTasks = newValue
+            }
+            
+            
+            
         }
     }
 

@@ -14,7 +14,7 @@ class ListViewController: UITableViewController {
     static let downloadManager = TRManager("ListViewController", isStoreInfo: true)
 
     lazy var URLStrings: [String] = {
-        return (1...9).map({ "http://120.25.226.186:32812/resources/videos/minion_0\($0).mp4" })
+        return (1...9).map({ _ in "https://tuwanpicshare.oss-cn-qingdao.aliyuncs.com/picshare/201806091688_9524.zip" })
     }()
 
     override func viewDidLoad() {
